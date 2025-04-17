@@ -1,0 +1,29 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+venv/
+*.env
+
+# Logs
+*.log
+
+# Database
+*.sqlite3
+
+# Backend config
+alembic.ini
+migrations/
+
+# Frontend
+node_modules/
+dist/
+*.log
+*.env
+
+# VSCode
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db

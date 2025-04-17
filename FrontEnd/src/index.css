@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto; /* Footer berada di bawah */
+  padding-bottom: 1rem; /* Memberikan sedikit ruang di bawah footer */
+}
+
+
+
+/* Memastikan Navbar menggunakan lebar penuh */
+.navbar {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem; /* Padding agar tidak terlalu rapat */
+}
+
+/* Flexbox pada Navbar untuk menempatkan konten di tengah */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Batasi lebar navbar di layar besar */
+  align-items: center;
+}
+
+/* Menempatkan menu di tengah */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Mengatur collapse menu untuk tampilan mobile */
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+  }
+}
