@@ -1,56 +1,33 @@
-import React from "react";
-import DestinasiCard from "../components/DestinasiCard";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { destinations } from "../components/Destinations";
 
-const DestinasiPage = () => {
-  const destinasi = [
-    {
-      title: "Taman Nasional Borneo",
-      image: "https://example.com/taman-borneo.jpg",
-      description: "Discover the rich wildlife and forest of Borneo.",
-    },
-    {
-      title: "Pantai Kalbar",
-      image: "https://example.com/pantai-kalbar.jpg",
-      description: "Relax and enjoy the stunning beaches in Kalimantan.",
-    },
-    {
-      title: "Pantai Kalbar",
-      image: "https://example.com/pantai-kalbar.jpg",
-      description: "Relax and enjoy the stunning beaches in Kalimantan.",
-    },
-    {
-      title: "Taman Nasional Borneo",
-      image: "https://example.com/taman-borneo.jpg",
-      description: "Discover the rich wildlife and forest of Borneo.",
-    },
-    {
-      title: "Pantai Kalbar",
-      image: "https://example.com/pantai-kalbar.jpg",
-      description: "Relax and enjoy the stunning beaches in Kalimantan.",
-    },
-    {
-      title: "Pantai Kalbar",
-      image: "https://example.com/pantai-kalbar.jpg",
-      description: "Relax and enjoy the stunning beaches in Kalimantan.",
-    },
-  ];
-
+const DestinasiPage = ({ destinations }) => {
   return (
-    <div className="flex justify-center items-center min-h-screen px-4 py-6">
-      <div className="w-full max-w-screen-xl">
-        {/* Title for Discover Your Love */}
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
-          Discover Your Love
-        </h2>
-        {/* Grid for Destinasi Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {destinasi.map((item, index) => (
-            <DestinasiCard
-              key={index}
-              title={item.title}
-              image={item.image}
-              description={item.description}
-            />
+    <div>
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {destinations.map((destination) => (
+            <div
+              key={destination.id}
+              className="rounded-lg overflow-hidden shadow-md border border-gray-200 flex flex-col"
+            >
+              <img
+                src={destination.image}
+                alt={destination.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4 flex flex-col">
+                <h4 className="font-semibold text-lg mb-2">{destination.title}</h4>
+                <p className="text-gray-600 text-sm mb-4">{destination.description}</p>
+                {/* Explore button */}
+                <Link
+                  to="/Jelajah-Kalbar" 
+                  className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm font-medium mt-auto flex items-center justify-center"
+                >
+                  Explore
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </div>

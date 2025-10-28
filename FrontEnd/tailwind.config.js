@@ -20,7 +20,8 @@ export default {
 
     extend: {
       colors: {
-        customBlue: '#158BA8', // Menambahkan warna kustom
+        customBlue: '#158BA8', 
+        
       },
     },
 
@@ -29,3 +30,4 @@ export default {
   plugins: [mtConfig],
 
 }
+

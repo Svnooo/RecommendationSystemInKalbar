@@ -1,19 +1,19 @@
-import HeroSection from "../components/HeroSection"
-import HeroSectionRS from "../components/HeroSectionRS"
-import DestinasiPage from "./DestinasiPage"
-import RecommendationForm from "./form"
-
+import { destinations } from '../components/Destinations'; // Pastikan path benar
+import HeroSectionRS from "../components/HeroSectionRS";
+import RecommendationForm from "./form";
+import DestinasiPage from "./DestinasiPage"; 
 
 const RekomendasiWisata = () => {
     return (
-<div>
-    <HeroSectionRS/>
-    <br />
-    <RecommendationForm/>
-    <br />
-    <DestinasiPage/>
-</div>
-    )
-}
+        <div>
+            <HeroSectionRS />
+            <br />
+            <RecommendationForm />
+            <br />
+            {/* Kirim destinations sebagai props ke DestinasiPage */}
+            {/* <DestinasiPage destinations={destinations} /> */}
+        </div>
+    );
+};
 
-export default RekomendasiWisata
+export default RekomendasiWisata;

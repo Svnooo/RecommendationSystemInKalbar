@@ -1,8 +1,9 @@
 import React from 'react';
+import RumahBetang from '../assets/rumah betang.png'
 
 const HeroSection = () => {
   return (
-    <div className="hero bg-cover bg-center min-h-screen relative" style={{ backgroundImage: 'url("https://example.com/your-image.jpg")' }}>
+    <div className="hero bg-cover bg-center min-h-screen relative" style={{ backgroundImage: `url(${RumahBetang})` }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
       

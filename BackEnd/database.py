@@ -12,3 +12,4 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base untuk model SQLAlchemy
 Base = declarative_base()
+

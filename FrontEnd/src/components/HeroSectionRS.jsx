@@ -1,11 +1,12 @@
 import React from 'react';
+import RSimg from '../assets/RS.png'
 
 const HeroSectionRS = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background Image - Venice with gondolas */}
       <div className="absolute inset-0 bg-cover bg-center" 
-           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")' }}>
+           style={{ backgroundImage: `url(${RSimg})` }}>
       </div>
       
       <div className="relative z-10 flex items-center justify-between h-full min-h-screen px-8">
